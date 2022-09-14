@@ -1,0 +1,70 @@
+.wish
+{
+    position: absolute !important;
+    top: 55px !important;
+    right: 0% !important;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 12343432;
+}
+.see
+{
+    width: 400px !important;
+    height: 500px !important;
+}
+.cantsee
+{
+    width: 0px;
+    height: 0px;
+}
+
+.wish-p
+{
+    width: 90%;
+    height: 60px !important;
+    color: black;
+    margin: 8px 0;
+    padding: 10px;
+    padding-top: 0;
+    border-radius: 5px;
+    border: 1px solid silver;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wish-img
+{
+    width: 50px;
+    margin-top: 15px;
+    height: 40px;
+}
+.widh-name,
+.wish-del
+{
+    width: 50px;
+}
+
+.widh-name
+{
+    width: 150px; 
+    font-size: 15px;  
+}
+
+.wish-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.bi-heart-fill
+{
+    position: relative;
+}

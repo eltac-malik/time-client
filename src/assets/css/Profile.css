@@ -1,0 +1,161 @@
+.profile
+{
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-div
+{
+    width: 70%;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid silver;
+    animation: border-anime 3s infinite;
+}
+
+@keyframes border-anime
+{
+    0%
+    {
+        border-left-color: #f86961;
+        transition: 0.3s;
+    }
+    25%
+    {
+        border-top-color: #f86961;
+        transition: 0.3s;
+    }
+    50%
+    {
+        border-right-color: #f86961;
+        transition: 0.3s;
+    }
+    75%
+    {
+        border-bottom-color: #f86961;
+        transition: 0.3s;
+    }
+    100%
+    {
+        border-left-color: #f86961;
+        transition: 0.3s;
+    }
+}
+
+.p-form
+{
+    width: 100%;
+    padding: 30px;
+}
+
+.p-left
+{
+    width: 30%;
+    height: 100%;
+    background-color: sienna;
+}
+
+.p-field
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+}
+
+.p-label
+{
+    font-size: 20px;
+    
+}
+
+.p-inp
+{
+    height: 100%;
+    width: 50%;
+    padding-left: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border: 1px solid silver;
+}
+
+.p-sub
+{
+    width: 90%;
+    height: 50px;
+    background-color: #f86961;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.p-sub:hover
+{
+    background-color: #ca4a43;
+    transition: 0.3s;
+}
+
+.ch-psw
+{
+    margin-top: 20px !important;
+    color: #f86961;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 1px solid #f86961;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.ch-psw:hover
+{
+    color: white;
+    border-color: white;
+    background-color: #f86961;
+    transition: 0.3s;
+}
+
+
+.lg-div
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+@media(max-width:900px)
+{
+    .p-field
+    {
+        flex-direction: column;
+        height: 100px;
+    }
+    .p-inp
+    {
+        width: 100%;
+        height: 50px !important;
+    }
+    .p-div
+    {
+        width: 90%;
+    }
+}

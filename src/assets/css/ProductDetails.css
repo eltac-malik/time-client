@@ -1,0 +1,233 @@
+.p-details {
+    margin-top: 80px;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .item-det {
+    width: 80%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item-slid {
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .item-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .itm-img {
+    width: 80%;
+    height: 70%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .itm-content {
+    width: 80%;
+    height:60vh;
+    border: 1px solid silver;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 30px;
+  }
+  .itm-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .itm-slds {
+    width: 80%;
+    height: 20%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid silver;
+    border-radius: 5px;
+  }
+  .about-slid {
+    height: 90%;
+    width: 90%;
+    border-radius: 5px;
+  }
+  
+  .prod-img {
+    width: 70px !important;
+    height: 70px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(221, 218, 218);
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .prod-img img {
+    width: 100%;
+  }
+  
+  .prod-title {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #333;
+  }
+  
+  .item-price
+  {
+  box-sizing: border-box;
+  color: rgb(249, 112, 106);
+  display: inline;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  line-height: 45px;
+  text-align: left;
+  visibility: visible;
+  width: auto;
+  margin-right: 20px;
+  }
+  
+  .prod-price
+  {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+  }
+  
+  .prod-dis
+  {
+  font-family: IBM Plex Sans,sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #868686;
+  text-decoration: line-through;
+  width: 200px;
+  }
+  .prod-desc
+  {
+      width: 100%;
+      text-align: left;
+      margin-top: 20px;
+  }
+  
+  .det-btn
+  {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .det-btn p
+  {
+    width: 100px;
+    margin: 10px;
+    background-color: #f9706a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .det-btn p:hover
+  {
+    background-color: #f15951;
+    transition: 0.3s;
+  }
+  
+  .det-add
+  {
+    width: 300px !important;
+  }
+  
+  @media(max-width:900px)
+  {
+    .p-details
+    {
+      width: 100%;
+    }
+    .item-det
+    {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    .itm-slds
+    {
+      height: 90px;
+    }
+    .item-slid
+    {
+      width: 100%;
+      height: 600px;
+    }
+    .itm-img
+    {
+      height: 40vh;
+    }
+    .item-content
+    {
+      width: 100%;
+    }
+    .itm-content
+    {
+      width: 90%;
+      height: 400px;
+    }
+    .prod-price
+    {
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-start;
+    }
+    .det-add
+    {
+      width: 100px !important;
+    }
+    .item-price
+    {
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-start;
+    }
+    .prod-dis
+    {
+      font-size: 20px;
+    }
+  }

@@ -1,0 +1,195 @@
+.reg-form
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://images.pexels.com/photos/1162519/pexels-photo-1162519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.reg-part
+{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.naming
+{
+    width: 50%;
+    min-height: 70vh;
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f9716a8c;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.numing
+{
+    width: 50%;
+    min-height: 70vh;
+    background-color: #f9716aa4;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rg-field
+{
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.rg-lbl
+{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    color: white;
+}
+
+.rg-inp
+{
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.rg-inp:focus
+{
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.rg-sub-inp
+{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+    background-color: #f9706a;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.rg-sub-inp:hover
+{
+    font-size: 25px;
+    transition: 0.3s;
+    background-color: rgb(67, 165, 110);
+}
+
+.inpp:hover
+{
+    font-size: 20px;
+    background-color: #d85851;
+}
+
+.inpp
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.reg-err
+{
+    color: red;
+    font-size: 15px;
+    padding: 0;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.slct
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+
+.slct select
+{
+    width: 20%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 20px;
+    background-color: white !important;
+}
+
+.slct input
+{
+    width: 75%;
+}
+
+
+
+@media(max-width:900px)
+{
+    .reg-part
+    {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .naming,
+    .numing
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 95%;
+        border-radius: 0%;
+        padding-left: 0;
+    }
+    .rg-inp:focus
+    {
+        margin-left: 0px;
+    }
+    .numing
+    {
+        margin-bottom: 20px;
+    }
+    .rg-field
+    {
+        width: 95%;
+    }
+}

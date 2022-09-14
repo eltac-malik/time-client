@@ -1,0 +1,45 @@
+.watch
+{
+    width: 95%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watch-cont
+{
+    height: 300px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.watch-p
+{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.watch-p img
+{
+    width: 100%;
+}
+
+@media(max-width:900px)
+{
+    .watch-cont
+    {
+        flex-direction: column;
+        height: auto;
+    }
+    .watch-p
+    {
+        width: 100%;
+    }
+}

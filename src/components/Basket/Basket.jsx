@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import './Basket.css'
 import {useSelector,useDispatch} from 'react-redux'
-import {delBasket,decCount} from 'redux/basketSlice'
+import {setBasket,decCount} from 'redux/basketSlice'
 
 function Basket({bs}) {
 
@@ -25,6 +25,15 @@ function Basket({bs}) {
         
     }
 
+    const handleDel = (e)=>
+    {
+        let newBasket = x.filter(z=> z.id != e.id)
+        localStorage.setItem('basket',JSON.stringify(newBasket))
+        dispatch(setBasket(localStorage.getItem('basket')))
+    }
+
+
+
     return (
         <div className={`bskt ${bs}`}>
                             {
@@ -34,7 +43,7 @@ function Basket({bs}) {
                             <div className='bs-item'>
                             <p className='item-name'>{e.name}</p>
                                 <p className='item-name'>{e.discountPrice} AZN</p>
-                                
+                                <i class="fa-solid fa-trash basket-trash" onClick={()=> handleDel(e)}></i>
                             </div>
                         )
                     }):<div>salam</div>

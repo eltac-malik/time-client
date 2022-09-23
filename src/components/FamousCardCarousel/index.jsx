@@ -45,7 +45,7 @@ function Index() {
   
   useEffect(()=>
   {
-    axios.get("http://ejtacmalik-001-site1.btempurl.com/api/Products/getall/1")
+    axios.get("http://ejtacmalik-001-site1.btempurl.com/api/Products/getall/2")
     .then(resp=> setFam(resp.data.items))
   },[])
 

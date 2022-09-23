@@ -14,6 +14,7 @@ import BDetails from 'Pages/BlogDetails'
 import Registers from 'Pages/Registers'
 import {useDispatch} from 'react-redux'
 import {setBasket} from 'redux/basketSlice'
+import SearcBrand from 'Pages/SearchBrand'
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
           <Route path='/registers' element={<Registers/>}/>
           <Route path='/contact' element={<Base><Contact/></Base>}/>
           <Route path='/shop' element={<Base><Shop/></Base>}/>
+          <Route path='/searchbrand' element={<Base><SearcBrand/></Base>}/>
 
         </Routes>
     </div>

@@ -131,6 +131,40 @@
   {
       width: 50%;
   }
+
+  .pagenation
+  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .pagenation p
+  {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    padding-top: 10px;
+    font-size: 19px;
+    background-color: #f86961;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .pagenation p:hover
+  {
+    background-color: #ce4a43;
+    transition: 0.3s;
+  }
   
   @media(max-width:900px)
   {
@@ -160,3 +194,14 @@
 
 
 
+
+
+  .search-brand
+  {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }

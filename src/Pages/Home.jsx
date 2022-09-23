@@ -5,6 +5,7 @@ import Support from 'components/Support/Support'
 import Famous from 'components/FamousCardCarousel'
 import Gift from 'components/Gift/Gift'
 import Watch from 'components/Watch/Watch';
+import MostCard from 'components/MostCard/MostCard'
 
 function Home() {
 
@@ -31,6 +32,9 @@ function Home() {
         </div>
         <div className="cont">
             <Watch/>
+        </div>
+        <div className="cont">
+        <MostCard/>
         </div>
         </div>
     )

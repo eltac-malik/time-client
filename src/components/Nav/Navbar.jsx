@@ -52,12 +52,12 @@ function Navbar() {
   
   const navigate = useNavigate()
 
-  const handleGo = (e)=>
+  const handleGo = (z)=>
   {
-    navigate(e);
-    setMenu("deactive-menu")
+    localStorage.setItem('onBrand',JSON.stringify(z))
+    navigate("/searchbrand")
   }
-
+  
   
   return (
     <div className="navbar">
@@ -88,10 +88,10 @@ function Navbar() {
         <div className="dropdown-prod">
           <ul className='drop-ul'>
             {
-              prod.map(e=>
+              prod.filter(e=> !e.isDeleted).map(e=>
               {
                 return(
-                  <li key={e.id} className='drop-li'><p className='drop-link'>{e.name}</p></li>
+                  <li key={e.id} onClick={()=> handleGo(e.id)} className='drop-li'><p className='drop-link'>{e.name}</p></li>
                 )
               })
             }

@@ -12,7 +12,6 @@ function Profile() {
         
     useEffect(()=>
     {
-
         setPd(decodeToken(JSON.parse(localStorage.getItem("Utoken"))))
     },[])
 
@@ -21,7 +20,7 @@ function Profile() {
         localStorage.removeItem("Utoken")
         navigate("/")
     }
-    console.log("vuqar",pd);
+    
 
     return (
         <div className='profile'>
@@ -33,6 +32,34 @@ function Profile() {
                     prsurname:pd?.surname,
                     prmail:pd?.email,
                     prphone:pd?.phone
+                }}
+                onSubmit={(x)=>
+                {
+                    let editUser=
+                    {
+                        id:pd.id,
+                        name:x.prname,
+                        surName:x.prsurname,
+                        username:pd.username,
+                        email:x.prmail,
+                        phoneNumber:x.prphone
+                    }
+
+
+                    let url = "http://ejtacmalik-001-site1.btempurl.com/api/Accounts/update"
+                    fetch(url,{
+                        method:'post',
+                        headers:
+                        {
+                            "Content-Type": "application/json",
+                        },
+                        body:JSON.stringify(editUser)
+                    }).then(resp=> 
+                        {
+                            console.log(resp.status);
+                        })
+                    
+                    
                 }}
                 >
                     <Form className='p-form'>

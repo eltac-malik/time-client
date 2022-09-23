@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './ShopCard.css'
+import 'components/ShopCard/ShopCard.css'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
@@ -11,33 +11,26 @@ function ShopCard({inp,category,brands}) {
     const [pdata,setPdata] = useState([])
     const [style,setStlye] = useState("crds")
     const [page,setPage] = useState(1)
-    const [totalPage,setTotalPage] = useState()
 
     useEffect(()=>
     {
+      let ls = JSON.parse(localStorage.getItem('onBrand'))
       axios.get(`http://ejtacmalik-001-site1.btempurl.com/api/Products/getall/${page}`)
-      .then(resp=>
-        {
-            setPdata(resp.data.items)
-            setTotalPage(resp.data.totalPage)
-        })
-      
-    },[page])
+      .then(resp=> setPdata(resp.data.items))
+
+      let z = pdata.filter(e=> e.brandId == ls)
+      setPdata(z)
+    },[])
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    console.log(pdata);
     
 
     const handleNext = ()=>
     {
-        setPage(page+1)
+        
     }
 
-    const handlePrevious = ()=>
-    {
-        setPage(page-1)
-    }
-
-    
 
     
     const handleBasket = (e)=>
@@ -49,10 +42,7 @@ function ShopCard({inp,category,brands}) {
     else
     {
         let x = JSON.parse(localStorage.getItem("basket"))
-
         let z = x.find(y=>y.id==e.id)
-
-       
         if (z==undefined)
         {
             localStorage.setItem("basket",JSON.stringify([...x,e]))
@@ -89,9 +79,9 @@ function ShopCard({inp,category,brands}) {
 
 
     return (
-        <div className='sp-card'>
+        <div className='search-brand'>
             <div className="adverstment">
-                <img src="https://cdn.shopify.com/s/files/1/0039/3740/2989/files/825x220.jpg?v=1559383366" alt=""/>
+                <img src="https://otherplanet.photo/wp-content/uploads/2022/06/torgoen-watches-advertising-photography-with-several-props.jpg" alt=""/>
             </div>
             <div className="style-map">
                 <div className="st-map">
@@ -107,18 +97,7 @@ function ShopCard({inp,category,brands}) {
             </div>
             <div className="all-card">
             {
-                pdata&&pdata.filter(e=>
-                    {
-                        if(inp==="")
-                        {
-                            return e
-                        }
-                        else if(e.name.toLowerCase().includes(inp.toLowerCase())||e.code.toLowerCase().includes(inp.toLowerCase()))
-                        {
-                            return e
-                        }
-                    }).filter(e=> brands!==''?e.brandId===brands:e).filter(e=> !e.isDeleted)
-                    .filter(e=>  category!==''?e.categoryId===category:e).map(e=> 
+                pdata&&pdata.filter(e=> brands!==''?e.brandId===brands:e).filter(e=> !e.isDeleted).map(e=> 
                 {
                     return(
                         <div key={e.id} onClick={(z)=>
@@ -135,11 +114,7 @@ function ShopCard({inp,category,brands}) {
                                 handleWish(e)
                                 z.stopPropagation()
                             }}></i>
-                            <i onClick={(x)=>
-                            {
-                                handleBasket(e)
-                                x.stopPropagation()
-                            }} className="bi bi-bag-plus"></i>
+                            <i className="bi bi-bag-plus"></i>
                             </div>
                         </div>
                         <p className='c-title'>{e.name} {e.code}</p>
@@ -164,8 +139,8 @@ function ShopCard({inp,category,brands}) {
   
       <div className="pagenation">
         
-        {page != 1 ? <p onClick={()=> handlePrevious()}>Previoues</p>:null}
-        {totalPage>page? <p onClick={()=> handleNext()}>Next</p> : null}
+        <p>Previoues</p>
+        <p onClick={()=> handleNext()}>Next</p>
       </div>
 
         </div>

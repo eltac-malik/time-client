@@ -16,7 +16,6 @@ function Shop() {
   
   const [category, setCategory] = useState('');
   const [brands, setBrands] = useState('');
-  const [color, setColor] = useState('');
 
   const handleChangeCategory = (event) => {
     setCategory(event.target.value);
@@ -24,10 +23,6 @@ function Shop() {
   const handleChangeBrand = (event) => {
     setBrands(event.target.value);
   };
-  const handleChangeColor = (event) => {
-    setColor(event.target.value);
-  };
-
 
 
   return (
@@ -64,10 +59,12 @@ function Shop() {
           label="Category"
           onChange={handleChangeCategory}
         >
-          <MenuItem value={'Digital'}>Digital</MenuItem>
-          <MenuItem value={'Quatrz'}>Quatrz</MenuItem>
-          <MenuItem value={'Solar'}>Solar</MenuItem>
-          <MenuItem value={'Solar'}>Analog</MenuItem>
+          <MenuItem value={''}>All</MenuItem>
+          <MenuItem value={'9'}>Digital</MenuItem>
+          <MenuItem value={'10'}>Quatrz</MenuItem>
+          <MenuItem value={'11'}>Solar</MenuItem>
+          <MenuItem value={'12'}>Touched</MenuItem>
+          <MenuItem value={'13'}>Analog</MenuItem>
         </Select>
       </FormControl>
     </Box>
@@ -107,9 +104,6 @@ function Shop() {
         <ShopCard category={category} brands={brands} inp={inp}/>
     
       </div>
-  
-
-
   
   
     </div>
